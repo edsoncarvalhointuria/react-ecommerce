@@ -6,7 +6,7 @@ Este projeto é uma **simulação de um ecommerce**, desenvolvido com **React**.
 
 > 🔍 **Observação:** Este projeto foi feito para fins de aprendizado e não tem propósitos comerciais.
 
-📌 **Acesse:**[Link do projeto]()
+📌 **Acesse:**[Link do projeto](https://edsoncarvalhointuria.github.io/EcommerceReact/)
 
 ## 🛠 Funcionalidades
 

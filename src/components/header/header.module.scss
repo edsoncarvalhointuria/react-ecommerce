@@ -1,0 +1,62 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    max-height: 8rem;
+    background-color: #162521;
+    padding: 1rem 2rem;
+    box-shadow: 0.2rem 0rem 0.5rem rgba(0, 0, 0, 0.5);
+
+    &__img {
+        width: 5rem;
+    }
+}
+
+.nav {
+    display: flex;
+    gap: 2rem;
+    &__link,
+    &__sacola {
+        cursor: pointer;
+        color: #c0e0de;
+        font-size: 2.2rem;
+        transition: all 0.5s ease;
+
+        &:hover {
+            color: #4f7cac;
+        }
+    }
+
+    &__sacola {
+        position: relative;
+
+        &--qtd {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            aspect-ratio: 2/1;
+            font-weight: bold;
+            position: absolute;
+            top: 0rem;
+            right: 0rem;
+            transform: translate(60%, -30%);
+            font-size: 1rem;
+            background-color: red;
+            padding: 0.4rem;
+            color: white;
+            border-radius: 50%;
+        }
+    }
+}
+
+/*
+    #C0E0DE
+    #9EEFE5
+    #4F7CAC
+    #162521
+    #3C474B
+*/

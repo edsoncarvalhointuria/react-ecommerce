@@ -1,0 +1,30 @@
+@import "../../assets/styles/mixins";
+
+.produtos {
+    padding: 3rem;
+
+    @include response(small) {
+        padding: 3rem 6rem;
+    }
+
+    &__grid {
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 3rem;
+
+        @include response(big) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include response(medium) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        @include response(small) {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 1rem;
+        }
+    }
+}

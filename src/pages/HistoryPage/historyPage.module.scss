@@ -1,0 +1,81 @@
+@import "../../assets/styles/mixins";
+
+.history {
+    background-color: white;
+    margin: 5rem 20rem;
+    padding: 2rem 4rem;
+    display: grid;
+    gap: 3rem;
+
+    @include response(big) {
+        margin: 5rem 10rem;
+    }
+
+    @include response(medium) {
+        margin: 5rem 0rem;
+    }
+
+    @include response(small) {
+        padding: 2rem 1rem;
+    }
+
+    &__container {
+        display: grid;
+        gap: 3rem;
+    }
+}
+
+.detalhes-container {
+    z-index: 15;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(3px);
+
+    &--close {
+        width: 100dvw;
+        height: 100dvh;
+        z-index: 15;
+        position: absolute;
+    }
+}
+
+.detalhes-item {
+    z-index: 16;
+    max-height: 80dvh;
+    overflow-y: auto;
+    display: grid;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sem-pedidos {
+    padding: 10rem;
+    display: grid;
+    place-items: center;
+    gap: 3rem;
+
+    &__btn {
+        padding: 1.5rem 4.5rem;
+        border-radius: 1rem;
+        text-decoration: none;
+        color: inherit;
+        text-transform: uppercase;
+        cursor: pointer;
+        background: #c0e0de;
+        transition: all 0.4s ease-in-out;
+        border: 1px solid #162521;
+        font-weight: bold;
+
+        &:hover {
+            background: darken(#c0e0de, 20%);
+            color: white;
+        }
+    }
+}

@@ -1,0 +1,92 @@
+.produto {
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    place-items: center;
+
+    &__select {
+        position: relative;
+        &:hover {
+            & img {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    &__img {
+        aspect-ratio: 1024/1536;
+        overflow: hidden;
+
+        & img {
+            transition: all 0.3s ease-out;
+        }
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2.5rem;
+        width: 90%;
+        position: absolute;
+        left: 50%;
+        bottom: 1rem;
+        transform: translateX(-50%);
+        font-size: 1.7rem;
+        cursor: pointer;
+        background: #c0e0de;
+        transition: all 0.4s ease-in-out;
+        border: 1px solid #162521;
+
+        &:hover {
+            background: darken(#c0e0de, 20%);
+            color: white;
+        }
+
+        & span {
+            font-weight: 700;
+            font-size: 2rem;
+        }
+    }
+
+    &__name {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    &__infos {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        gap: 1rem;
+        margin: 2rem 0;
+        height: 100%;
+    }
+
+    &__brand {
+        font-size: 1.4rem;
+        align-self: center;
+        color: gray;
+    }
+
+    &__infos-price {
+        justify-self: end;
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+    }
+
+    &__price {
+        &--old {
+            font-size: 1.3rem;
+            text-decoration: line-through;
+            font-weight: bold;
+            color: gray;
+        }
+
+        &--new {
+            font-weight: bold;
+        }
+    }
+}

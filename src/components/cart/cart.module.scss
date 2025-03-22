@@ -1,0 +1,91 @@
+@import "../../assets/styles/mixins";
+.cart {
+    transform: translatex(100%);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 11;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 44.5rem;
+    transition: all 0.2s ease-out;
+
+    &--open {
+        transform: translatex(0%);
+    }
+
+    &-close {
+        backdrop-filter: blur(3px);
+    }
+
+    &__close {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 700;
+        color: white;
+        padding-bottom: 1rem;
+
+        &-x {
+            cursor: pointer;
+            &:hover {
+                color: crimson;
+            }
+        }
+    }
+
+    &__infos {
+        grid-column: -2;
+        height: 100%;
+        background-color: #162521;
+        display: grid;
+        align-items: start;
+        grid-template-rows: auto 1fr auto auto;
+        padding: 2rem;
+        gap: 1rem;
+    }
+
+    &__vazio {
+        font-weight: bold;
+        color: white;
+    }
+
+    &__items {
+        display: grid;
+
+        align-items: center;
+        gap: 1rem;
+        max-height: 75vh;
+        overflow-y: auto;
+        scrollbar-width: thin;
+
+        @include response(medium) {
+            max-height: 70vh;
+        }
+    }
+
+    &__total {
+        display: flex;
+        width: 100%;
+        font-size: 2rem;
+        gap: 1rem;
+        color: green;
+        font-weight: bold;
+        // justify-content: space-between;
+    }
+
+    &__checkout {
+        padding: 2rem;
+        cursor: pointer;
+        background: #c0e0de;
+        transition: all 0.3s ease;
+        border: 1px solid black;
+        font-family: inherit;
+        font-weight: bold;
+        width: 100%;
+        &:hover {
+            background: #4f7cac;
+            color: #f2f2f2;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+.checkout {
+    &__form {
+        &-input {
+            position: relative;
+            width: 100%;
+
+            &:has(input:not(:placeholder-shown)),
+            &:has(input:focus) {
+                & label {
+                    transform: translate(0.5rem, -200%);
+                    background-color: #f2f2f2;
+                    color: gray;
+                }
+            }
+
+            & input {
+                width: 100%;
+                padding: 1rem;
+                background: #f2f2f2;
+                border: 1px solid #020202;
+                border-radius: 1rem;
+                font-weight: bold;
+                color: #3c474b;
+
+                &:focus {
+                    outline: solid 1px #020202;
+                }
+            }
+
+            & label {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                font-size: 1.4rem;
+                transform: translate(0.5rem, -50%);
+                padding: 0 0.3rem;
+                transition: all 0.3s ease;
+                color: #020202;
+            }
+        }
+    }
+}

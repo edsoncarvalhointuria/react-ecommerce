@@ -1,0 +1,19 @@
+@mixin response($tamanho) {
+    @if $tamanho == big {
+        @media all and (max-width: 73.3125em) {
+            @content;
+        }
+    } @else if $tamanho == big-small {
+        @media all and (max-width: 61.9375em) {
+            @content;
+        }
+    } @else if $tamanho == medium {
+        @media all and (max-width: 47.9375em) {
+            @content;
+        }
+    } @else if $tamanho == small {
+        @media all and (max-width: 30em) {
+            @content;
+        }
+    }
+}

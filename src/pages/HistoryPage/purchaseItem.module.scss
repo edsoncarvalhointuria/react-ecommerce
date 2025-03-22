@@ -1,0 +1,112 @@
+@import "../../assets/styles/mixins";
+
+.purchase-item {
+    display: grid;
+    box-shadow: 0 0 1rem 0rem rgba(0, 0, 0, 0.552);
+    border-radius: 1rem;
+    border-radius: 1rem;
+
+    &__header {
+        background-color: #f2f2f2;
+        padding: 1.5rem 3rem;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        display: flex;
+        justify-content: space-between;
+
+        & h2 {
+            font-size: 2rem;
+
+            @include response(small) {
+                font-size: 1.6rem;
+            }
+        }
+
+        & p {
+            font-size: 1.4rem;
+        }
+    }
+
+    &__body {
+        display: flex;
+        padding: 1rem 2rem;
+        gap: 1rem;
+
+        @include response(medium) {
+            padding: 1rem 1rem;
+        }
+
+        @include response(small) {
+            gap: 0rem;
+        }
+    }
+
+    &__img {
+        max-width: 10rem;
+
+        @include response(small) {
+            max-width: 7rem;
+        }
+        & img {
+            border-radius: 0.5rem;
+        }
+    }
+
+    &__detalhes {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+
+    &__infos {
+        display: grid;
+        justify-content: space-between;
+
+        & p {
+            text-transform: uppercase;
+
+            @include response(small) {
+                font-size: 1.4rem;
+            }
+        }
+
+        & span {
+            color: red;
+        }
+
+        & a {
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+
+    &__btn {
+        align-self: center;
+        white-space: nowrap;
+        padding: 1.5rem 4.5rem;
+        border-radius: 1rem;
+        text-decoration: none;
+        color: inherit;
+        text-transform: uppercase;
+        cursor: pointer;
+        background: #c0e0de;
+        transition: all 0.4s ease-in-out;
+        border: 1px solid #162521;
+        font-weight: bold;
+
+        @include response(medium) {
+            padding: 1.5rem 2rem;
+        }
+
+        @include response(small) {
+            font-size: 1.4rem;
+            padding: 1.5rem 1.5rem;
+        }
+
+        &:hover {
+            background: darken(#c0e0de, 20%);
+            color: white;
+        }
+    }
+}

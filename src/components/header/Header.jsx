@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Cart from "../cart/cart";
+import Cart from "../cart/Cart";
 import { useLocation, Link } from "react-router-dom";
 import { productsAmount, useCartContext } from "../../contexts/contextCart";
 import s from "./header.module.scss";

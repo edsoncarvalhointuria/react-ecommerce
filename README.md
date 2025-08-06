@@ -1,5 +1,8 @@
 # 🛒 Simulação de Ecommerce
 
+![Adobe Express - 0806 (2) (1)](https://github.com/user-attachments/assets/3acb51be-1178-4270-834d-dc9a4082e67e)
+
+
 ## ✨ Sobre
 
 Este projeto é uma **simulação de um ecommerce**, desenvolvido com **React**. Ele permite que os usuários naveguem pelos produtos, adicionem itens ao carrinho e concluam compras de forma dinâmica. Todos os dados são armazenados no **localStorage** para simular uma experiência de compra contínua.
